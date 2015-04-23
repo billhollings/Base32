@@ -3,7 +3,7 @@
 //  Base32 -- RFC 4648 compatible implementation
 //  see http://www.ietf.org/rfc/rfc4648.txt for more details
 //
-//  Designed to be compiled with Automatic Reference Counting
+//  Designed to be compiled with Manaul Reference Counting
 //
 //  Created by Dave Poirier on 12-06-14.
 //  Public Domain

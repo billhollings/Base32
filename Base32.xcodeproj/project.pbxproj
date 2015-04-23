@@ -13,7 +13,7 @@
 		0DDF90F7158A1A0F00D44611 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 0DDF90F5158A1A0F00D44611 /* Credits.rtf */; };
 		0DDF90FA158A1A0F00D44611 /* MF_AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDF90F9158A1A0F00D44611 /* MF_AppDelegate.m */; };
 		0DDF90FD158A1A1000D44611 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DDF90FB158A1A1000D44611 /* MainMenu.xib */; };
-		0DDF910A158A1E2800D44611 /* MF_Base32Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDF9109158A1E2800D44611 /* MF_Base32Additions.m */; };
+		0DDF910A158A1E2800D44611 /* MF_Base32Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DDF9109158A1E2800D44611 /* MF_Base32Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */

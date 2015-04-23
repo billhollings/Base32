@@ -3,7 +3,7 @@
 //  Base32 -- RFC 4648 compatible implementation
 //  see http://www.ietf.org/rfc/rfc4648.txt for more details
 //
-//  Designed to be compiled with Automatic Reference Counting
+//  Designed to be compiled with Manual Reference Counting
 //
 //  Created by Dave Poirier on 12-06-14.
 //  Public Domain
@@ -113,7 +113,7 @@
                     decodedBytes[decodedBaseIndex+4] = ((encodedByte7 << 5) & 0xE0);
             }
             decodedBaseIndex += paddingAdjustment[encodedBlockIndex];
-            data = [[NSData alloc] initWithBytes:decodedBytes length:decodedBaseIndex];            
+            data = [NSData dataWithBytes:decodedBytes length:decodedBaseIndex];
         }
     }
     @catch (NSException *exception) {
@@ -208,7 +208,7 @@
             while( padding-- > 0 ) {
                 encodingBytes[encodingBaseIndex++] = '=';
             }
-            encoding = [[NSString alloc] initWithBytes:encodingBytes length:encodedLength encoding:NSASCIIStringEncoding];
+            encoding = [[[NSString alloc] initWithBytes:encodingBytes length:encodedLength encoding:NSASCIIStringEncoding] autorelease];
         }
     }
     @catch (NSException *exception) {
@@ -233,7 +233,7 @@
 +(NSString *)stringFromBase32String:(NSString *)base32String
 {
     NSData *utf8encoding = [MF_Base32Codec dataFromBase32String:base32String];
-    return [[NSString alloc] initWithData:utf8encoding encoding:NSUTF8StringEncoding];
+    return [[[NSString alloc] initWithData:utf8encoding encoding:NSUTF8StringEncoding] autorelease];
 }
 @end
 
